@@ -10,7 +10,7 @@
 ---
 
 
-**SAE WEB constituant mon Portfolio Web réalisé en HTML/CSS**. </br>
+**SAE WEB constituant mon Portfolio Web réalisé en HTML/CSS dynamique**. </br>
 **Je n'ai pas pu mettre les vidéos par manque d'espace de stockage dans GitHub**. </br>
 
 
