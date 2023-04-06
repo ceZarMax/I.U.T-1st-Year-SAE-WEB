@@ -1,0 +1,701 @@
+/*Importation de police d'écritures */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap');
+
+/*----------------------------------------------*/
+/* Faire en sorte que le scroll soit progressif et non 
+pas instannée, c'est beaucoup plus jolie */
+/*----------------------------------------------*/
+
+html{
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*----------------------------------------------*/
+
+/* Css du body */
+
+/*----------------------------------------------*/
+
+body{
+	margin: 0; /*marge extérieur à 0*/
+	padding: 0; /* marge intérieur à 0 */
+    background-image: url('./img/bg3.jpg');
+    font-family: 'Montserrat', sans-serif; /* Police d'écriture Montserrat */
+}
+
+
+
+
+/*----------------------------------------------*/
+
+/* CSS de la barre de navigation */
+
+/*----------------------------------------------*/
+
+/*Toute la barre de navigation*/
+nav{
+    display: flex; /* Aligner les éléments */
+    flex-wrap:wrap;/* Empiler les éléments au lieu 
+    de les aligner si le format ne correspond pas */
+    justify-content: center; /*indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe 
+  principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille, et, est placé au centre*/
+    align-items: center;/* Les éléments sont regroupés au centre */
+    border-bottom: 5px solid grey;/* Créer un soulignement de 5px solide en gris */
+    background-color: white;/* Background en blanc*/
+    position: sticky;/*La barre de navigation est calculée en fonction du flux normal du document et bouge ainsi lorsque l'utilisateur
+    scroll*/
+    top: 0px;/*définit une partie de la position des éléments positionnés à 0px*/
+    z-index: 1; /*Mettre tout devant mon menu pour éviter que
+    certains objets se voient sur mon menu*/
+    
+
+}
+
+/* couleur et police différente pour les titres h1*/
+
+nav h2{
+    color: #717171; /*Définit la couleur de la police d'écriture*/
+    font-family: 'Zen Kaku Gothic New', sans-serif;/*Sélection de la police d'écriture*/
+    font-size: 30px;/*Taille de la police*/
+    margin-top: 15px;/*définit l'espace vertical pour la marge appliquée en haut de l'élément de 15px.*/
+    margin-bottom: 15px;/* définit la marge basse appliquée à un élément de 15px. */
+}
+
+nav h2 a {
+    text-decoration: none;/*Pas de soulignement*/
+    color: currentColor;/*Couleur donné de base*/
+}
+
+/* Espacement entre les textes de navigation */
+
+nav .onglets{
+    margin-top: 3px;/*définit l'espace vertical pour la marge appliquée en haut de l'élément de 3px.*/
+    margin-left: 200px;/*définit l'espace horizontal à gauche qui formera la marge à gauche de l'élément de 200px*/
+}
+
+/* Centrer sur la même ligne mon titre et mon image puis la mettre sur la gauche */ 
+
+nav h2 img {
+    float: left; /*l'élément doit flotter du côté gauche du bloc qui le contient.*/
+    margin-top: 8px;/*définit l'espace vertical pour la marge appliquée en haut de l'élément de 8px.*/
+    margin-right: 10px;/*définit l'espace horizontal à droite qui formera la marge à droite de 10px*/
+}
+
+/* Modifier les onglets (liens qui se trouvent dans la div) */
+
+nav .onglets a{
+    display: block;/* définit le type d'affichage utilisée pour le rendu d'un élément et la disposition utilisée pour ses éléments fils
+    et modifie sa représentation au sein de l'arbre d'accessibilité.*/
+    text-decoration: none;/*Enlever la ligne qui est positionné en dessous du texte*/
+    color: black;/*Couleur du texte en noir*/
+    margin-right: 15px;/*définit l'espace horizontal à droite qui formera la marge à droite de 15px*/
+    padding-bottom: 1px; /* marge entre le texte et le soulignement */
+    padding: 5px 16px;/*permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément : 5px, 16px*/
+
+
+}
+/*--------------------------------------*/
+/* media qui est un media queries et permet de modifier l'apparence de mon site */
+/*--------------------------------------*/
+
+/* Pour les téléphones */
+@media screen and (max-width: 767px)
+
+{ 
+
+/*global*/
+
+{
+
+            width :100% ;
+
+            padding :0px ;
+
+}
+
+/*menu-gauche*/
+
+{
+
+            width :100% ;
+
+}
+/*contenu*/
+
+{
+
+            width :100% ;
+
+}
+/*sidebar-droite*/
+
+{
+
+            width :100% ;
+
+}
+}
+
+
+/* Pour les tablettes et grand écran */
+@media screen and (min-width: 768px) and (max-width: 1388px)
+
+{
+/*global*/
+
+{
+
+            width :100% ;
+
+            padding :0px ;
+
+}
+/*menu-gauche*/
+
+{
+
+            width :100% ;           
+
+}
+
+/*contenu*/
+
+{
+
+            width :80% ;
+
+}
+
+}
+
+/* Change la couleur quand on passe la souris sur les boutons */
+nav .onglets li a:hover {
+    background-color: #44444444; /* Background en gris */
+    color: #fff; /* Police en blanc */
+    display: block;/* définit le type d'affichage utilisée pour le rendu d'un élément et la disposition utilisée pour ses éléments fils
+    et modifie sa représentation au sein de l'arbre d'accessibilité.*/
+}
+
+/* Aligner mes boutons de gauche à droite */
+
+nav .onglets li {
+    float: left;/*l'élément doit flotter du côté gauche du bloc qui le contient.*/
+    list-style-type: none;/*n'annonce pas l'apparence de la puce d'un élément de liste*/
+    position: relative;/*un élément positionné de façon relative a comme propriétés top ou bottom, et, indiquent 
+  le décalage vertical à appliquer. Left ou right indiquent le décalage horizontal.*/
+}
+
+/* Permettre de mettre les logos plus à gauche afin d'éviter de les coller
+*/
+nav .logo {
+    float: left;/*l'élément doit flotter du côté gauche du bloc qui le contient.*/
+    margin-right: 10px;/*définit l'espace horizontal à droite qui formera la marge à droite de 10px*/
+}
+
+/* ------------------------------ */
+/* Début du css du menu déroulant */
+/* ------------------------------ */
+
+
+/* Flèche de droite */
+.menu-deroulant > a:after{ /* after permettant d'ajouter mon contenu 
+cosmétique */
+  content: '❯'; /* Ma flèche en question */
+  font-size: 15px;/*taille de la police en pixel*/
+  margin-left: 7px;/*définit l'espace horizontal à gauche qui formera la marge à gauche de l'élément de 7px*/
+  display: inline-block;/* définit le type d'affichage utilisée pour le rendu d'un élément et la disposition en ligne utilisée pour ses éléments fils
+    et modifie sa représentation au sein de l'arbre d'accessibilité.*/
+
+}
+
+/* La rotation de ma flèche quand ma souris est sur mon chapitre */
+.menu-deroulant:hover > a:after{
+  animation: rotationFleche 0.2s linear forwards; /* Temps de la flèche
+  à effectuer sa rotation : 0.2s */
+}
+
+/* Me permet de mieux controler les étapes qui composent ma séquence
+de l'animation de la flèche  */
+@keyframes rotationFleche {
+  0% {
+    transform: rotate(0deg); /* Au début de la rotation */
+  }
+  50% {
+    transform: rotate(45deg); /* Au milieu de la rotation */
+  }
+  100%{
+    transform: rotate(90deg); /* A la fin de la rotation */
+  }
+}
+
+/*Création de ma liste ul "sous-menu"*/
+.sous-menu {
+  margin-top: var(--hauteur-menu); /* Marge en haut par rapport à la variable hauteur menu*/
+  width: 100%;/*permet de définir la largeur du bloc de 100%*/
+  position: absolute; /* Permet de garder mon menu bien en haut à droite
+  et de le fixer. Aucun n'espace n'est créer pour lui */
+  overflow: hidden;/* lorsque l'image est floue, les bords de l'image sont coupés*/
+  max-height: 0;/*définir la hauteur maximale d'un élément donné*/
+  border-radius: 2px;/*permet de définir des coins arrondis pour la bordure d'un élément de 2px*/
+  background-color: white;/*couleur du background en grisclair*/
+}
+
+/* Centrer au maximum pour le menu home car ses sous-menus sont plus
+grands que ceux de Interests */
+.sous-menu.home {
+  padding-left: 10px;  /*correspond à l'espace nécessaire à la gauche d'un élément*/
+  padding-right: 70px;/*correspond à l'espace nécessaire à la droite d'un élément*/
+  
+}
+
+/* Centrer au maximum pour le menu interests car ses sous-menus étaient
+trop à droite */
+.sous-menu.interests {
+    padding-right: 20px;/*correspond à l'espace nécessaire à la droite d'un élément*/
+}
+
+/* Centrer au maximum pour le menu book car ses sous-menus étaient
+trop à gauche */
+.sous-menu.book {
+    padding-left: 80px;/*correspond à l'espace nécessaire à la gauche d'un élément*/
+    padding-right: 0px;/*correspond à l'espace nécessaire à la droite d'un élément*/
+}
+
+.menu-deroulant:hover > .sous-menu {
+  animation: apparitionSousMenu 2s forwards; /* Gère le temps du
+  déroulement */
+}
+
+@keyframes apparitionSousMenu {
+  0% {
+    box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+    border-top: 3px solid #4d4d4d;/* création de la bordure, taille,
+    paramètre et sa couleur */
+  }
+  30% {
+    box-shadow: 0px 3px 3px 1px #4d4d4d;
+  }
+  100% {
+    max-height: 50em;/*définir la hauteur maximale d'un élément donné*/
+    border-top: 3px solid #4d4d4d;/* création de la bordure, taille,
+    paramètre et sa couleur */
+    box-shadow: 0px 3px 3px 1px #4d4d4d;
+  }
+}
+
+.sous-menu > li:hover {
+  background-color: #4d4d4d;/*couleur du background*/
+}
+
+.sous-menu > li > a {
+  align-items: center;/* Les éléments sont regroupés au centre */
+  display: flex;/* aligner les éléments en ligne */
+  height: 50px;/*définit la hauteur de la boîte de contenu d'un élément*/
+  padding-left: 20px;/*correspond à l'espace nécessaire à la gauche d'un élément*/
+  width: 100%;/*permet de définir la largeur du bloc de 100%*/
+  border-style: none;/*permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.*/
+}
+
+.sous-menu > li:hover ul {
+    top:  0;/* Marge de 0pixel entre ma classe et le header */ 
+    left: 180px;/*permet de définir une partie de la position des éléments positionnés à gauche de 180*/
+}
+
+.sous-menu > li:hover > a {
+  color: white;/* Police d'écriture en blanc*/
+}
+/*----------------------------------------------*/
+/* FIN DE LA PARTIE MENU ET NAVIGATION */
+/*----------------------------------------------*/
+
+
+/*----------------------------------------------*/
+
+/* CSS du boutton Parcourir du Header*/
+
+/*----------------------------------------------*/
+
+
+.button {
+  display: inline-block;/* définit le type d'affichage utilisée pour le rendu d'un élément et la disposition en ligne utilisée pour ses éléments fils
+    et modifie sa représentation au sein de l'arbre d'accessibilité.*/
+  
+  border-radius: 4px;/*permet de définir des coins arrondis pour la bordure d'un élément de 4px*/
+  
+  background-color: white;/*couleur du background en grisclair*/
+  
+  border: none;/*permet de définir aucune bordure */
+  
+  color: black;/* Police d'écriture en noir*/
+  
+  text-align: center; /* définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau au centre*/
+  
+  font-size: 28px;/*taille de la police en pixel*/
+  
+  padding: 20px;/*permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément*/
+  
+  width: 200px;/*permet de définir la largeur du bloc de 200px*/
+  
+  transition: all 0.5s;/* transition qui s'applique à la propriété "all" et qui s'effectue en 0.5s*/
+  
+  cursor: pointer;/*définit la forme du curseur en pointer*/
+  
+  margin: 5px;/*définit la taille des marges sur les quatre côtés de l'élément de 5px*/
+  
+  font-family: 'Montserrat';/*Définir la police d'écriture*/
+}
+
+.button a {
+    text-decoration: none;/*Pas de soulignement*/
+    color: currentColor;/* Police d'écriture en couleur de base*/
+}
+
+.button span {
+  cursor: pointer;/*définit la forme du curseur en pointer*/
+  display: inline-block;/* définit le type d'affichage utilisée pour le rendu d'un élément et la disposition en ligne utilisée pour ses éléments fils
+    et modifie sa représentation au sein de l'arbre d'accessibilité.*/
+  position: relative;/*un élément positionné de façon relative a comme propriétés top ou bottom, et, indiquent 
+  le décalage vertical à appliquer. Left ou right indiquent le décalage horizontal.*/
+  transition: 0.5s;/* transition qui s'effectue en 0.5s*/
+}
+
+.button span:after {
+  content: '\00bb';/*générer le contenu d'un élément, en loccurence, ma flèche de mon bouton*/
+  position: absolute;/*Élément positionné de façon absolue, si l'élément possède des marges, elles sont ajoutées aux décalages.*/
+  opacity: 0;/*définit la transparence d'un élément.*/
+  top: 0;/* Marge de 0pixel entre ma classe et le header */ 
+  right: -20px;/*définit, en partie, la position des éléments positionnés*/
+  transition: 0.5s;/* transition qui s'effectue en 0.5s*/
+}
+
+.button:hover span {
+  padding-right: 25px;/*correspond à l'espace nécessaire à la droite d'un élément*/
+}
+
+.button:hover span:after {
+  opacity: 1;/*définit la transparence d'un élément de 1.*/
+  right: 0;/*définit, en partie, la position des éléments positionnés*/
+}
+/*----------------------------------------------*/
+
+/* CSS du Header */
+
+/*----------------------------------------------*/
+
+
+header, main, footer {
+  margin: 0 auto;/*définit la taille des marges sur les quatre côtés de l'élément automatiquement*/
+}
+
+header {
+  padding: 2em;/*permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément*/
+  text-align: center;/* définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau au centre*/
+  background-image: url('./img/bg5.jpg');
+  background-size: cover;/*définit la taille des images d'arrière-plan pour l'élément, "cover" redimensionne l'image
+  pour être aussi grande que possible et pour conserver ses proportions*/
+  border-bottom: 5px solid grey;
+  color: white;/* Police d'écriture en blanc*/
+}
+
+
+/* Quand je passe la souris sur l'email et le numéro de téléphone,
+le texte apparaît en blanc */
+.hoverheader > a:hover {
+    color: #fff; /* Police en blanc */
+}
+
+header section {
+  margin: 0 auto;/*définit la taille des marges sur les quatre côtés de l'élément automatiquement*/
+  max-width: 640px;/*définir la largeur maximale d'un élément donné de 640px*/
+}
+
+/* Arrondir mon gif */
+
+header img {
+  border-radius: 50%;/*permet de définir des coins arrondis pour la bordure d'un élément de 50%*/
+  max-width: 150px;/*définir la largeur maximale d'un élément donné de 150px*/
+}
+
+/* Créer les barres verticales */
+
+.fab { 
+  border: 1px solid white;/*permet de définir une bordure en blanc*/
+  border-radius: 50%;/*permet de définir des coins arrondis pour la bordure d'un élément de 50%*/
+  font-size: 1.5em;/*taille de la police*/
+  width: 1.5em;
+  height: 1.5em;/*définit la hauteur de la boîte de contenu d'un élément*/
+  line-height: 1.5em;/*définit la hauteur de la boîte d'une ligne.*/
+  margin: 10px;/*définit la taille des marges sur les quatre côtés de l'élément de 10px*/
+  text-align: center;/* définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau au centre*/
+}
+
+/* Enlever le surlignage des urls */
+
+a.notextdeco {
+  text-decoration: none;/*Pas de soulignement*/
+
+}
+
+/* Quand je passe mon curseur sur les logos de réseaux sociaux, l'opacité se 
+baisse */
+
+a.notextdeco :hover{
+    opacity: 0.5;/*définit la transparence d'un élément de 0.5.*/
+}
+
+/*----------------------------------------------*/
+
+/* CSS DE LA PARTIE PRINCIPALE */
+
+/*----------------------------------------------*/
+
+/*création de la section main*/
+.main{
+    margin-top: 40px; /* Marge de 40pixel entre ma classe et le header */    
+    display: flex;/* aligner les éléments en ligne */
+    flex-direction: column; /*définit les éléments flexibles en colonne*/
+    align-items: center;/* Les éléments sont regroupés au centre */
+    color: white;/* Police d'écriture en blanc*/
+}
+
+/*personnalisation de la section main et des divs content et perso*/
+.main .content .perso {
+    display: flex; /* Aligner les éléments */
+    flex-wrap: wrap; /* Empiler les éléments au lieu 
+    de les aligner si le format ne correspond pas */
+    justify-content: center;/*indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe 
+  principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille, et, est placé au centre*/
+    margin-top:20px; /* Espacer les deux contenus */
+}
+
+/* Pouvoir avoir un flex moins grand à gauche afin d'avoir les dimensions
+que je veux */
+.main .content .perso .left{
+   flex: 0 0 30%;/*définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.*/
+   padding: 20px;/*permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément*/
+   background-color: #4d4d4d;/*couleur du background*/
+   color: white;/* Police d'écriture en blanc*/
+}
+
+/* Régler la taille de l'image */
+.main .content .perso .right img{
+    height:300px;/*définit la hauteur de la boîte de contenu d'un élément*/
+    width: 400px;/*définir la largeur de la boîte du contenu d'un élément*/
+    margin-top: 5px;/*définit l'espace vertical pour la marge appliquée en haut de l'élément de 5px.*/
+
+}
+
+
+/* Régler la taille de la vidéo */
+.main .content .perso .right video{
+    height:300px;/*définit la hauteur de la boîte de contenu d'un élément*/
+    width: 400px;/*définir la largeur de la boîte du contenu d'un élément*/
+    margin-top: 5px;/*définit l'espace vertical pour la marge appliquée en haut de l'élément de 5px.*/
+}
+
+
+/* Ma gallerie */
+
+.grid-container {
+  display: grid;/* créer des mises en page en divisant l'espace d'affichage en régions utilisables par une application ou en 
+  définissant des relations de taille, position et d'empilement entre les éléments HTML*/
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));/*définit les noms des lignes et les fonctions de taille 
+  pour les colonnes de la grille.*/
+  grid-gap: 1em;/*permet de définir les espaces entre les lignes et entre les colonnes d'une grille.*/
+
+}
+
+.child-page-listing img {
+    width: 100%;/*définir la largeur de la boîte du contenu d'un élément*/
+    height: auto;/*définit la hauteur de la boîte de contenu d'un élément*/
+}
+
+.books-image {
+  line-height: 0;/*définit la hauteur de la boîte d'une ligne.*/
+}
+
+.books-listing {
+  position: relative;/*un élément positionné de façon relative a comme propriétés top ou bottom, et, indiquent 
+  le décalage vertical à appliquer. Left ou right indiquent le décalage horizontal.*/
+  overflow: hidden; /* lorsque l'image est floue, les bords
+  de l'image sont coupés*/
+  margin-left: 20px; /*ma marge entre chaque livres*/
+  float: left;/* positionner mes livres de gauche à droite*/
+}
+
+.books-title {
+  position: absolute;/*Élément positionné de façon absolue, si l'élément possède des marges, elles sont ajoutées aux décalages.*/
+  top: 0;/*définit une partie de la position des éléments positionnés en haut de 0*/
+  left: 0;/*permet de définir une partie de la position des éléments positionnés à gauche de 0*/
+  height: 100%;/*définit la hauteur de la boîte de contenu d'un élément*/
+  width: 100%;/*définir la largeur de la boîte du contenu d'un élément*/
+  background: rgba(90,0,10,0.4);
+/* Cacher le titre par défaut */
+  opacity: 0;
+  transition: opacity 0.5s;/* transition qui s'applique à la propriété "opacity" et qui s'effectue en 0.5s*/
+  z-index: 1; /* positionné le titre derrière */
+}
+
+
+.books-title {
+  position: absolute;/*Élément positionné de façon absolue, si l'élément possède des marges, elles sont ajoutées aux décalages.*/
+  top: 0;/*définit une partie de la position des éléments positionnés en haut de 0*/
+  left: 0;/*permet de définir une partie de la position des éléments positionnés à gauche de 0*/
+  height: 100%;/*définit la hauteur de la boîte de contenu d'un élément*/
+  width: 100%;/*définir la largeur de la boîte du contenu d'un élément*/
+  background: rgba(90,0,10,0.4);
+  
+  /* Ma typographie */
+  color: white;/* Police d'écriture en blanc*/
+  font-size: 1.5em;/*taille de la police*/
+  font-weight: bold;
+  text-decoration: none;/*Pas de soulignement*/
+  
+  /* Positionner le titre au milieu*/
+  display: flex;/* aligner les éléments en ligne */
+  align-items: center;/* Les éléments sont regroupés au centre */
+  justify-content: center;/*indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe 
+  principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille, et, est placé au centre*/
+}
+
+.books-listing:hover .books-title {
+  opacity: 1;/*opacité de 1*/
+}
+
+/* Création du filtre de flou à l'image. */
+
+.books-image img {
+  filter: blur(0px); /* augmenter l'effet sur la transition */
+  transition: filter 0.3s ease-in;/* transition qui s'applique à la propriété "filter", qui permet d'appliquer un effet de blur
+  ,qui s'effectue en 0.3s et "ease-in" définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle*/
+  transform: scale(1.1); /*met notre image dans toutes les directions à 1.1*/
+}
+
+.books-listing:hover .books-image img {
+  filter: blur(2px);/* dimension de blur de 2 pixels pendant un hover effet */
+}
+
+/* Pour les smartphones ou tablettes */
+@media (hover: none) { 
+  .location-title {
+    opacity: 1;/*opacité de 1*/
+  }
+  .location-image img {
+    filter: blur(2px);/* augmenter l'effet de flou sur la transition */
+  }
+}
+
+
+/*----------------------*/
+/* Barre de Compétences */
+/*----------------------*/
+
+.skill-container .skill { /*création de mes divs */
+  
+  color: white; /*couleur du texte en blanc*/
+  
+  background-color: lightgray;/*couleur du background en grisclair*/
+  
+  margin: 5px 0;/*définit la taille des marges sur les quatre côtés de l'élément de 5px*/
+  
+  padding: 10px 0 10px 4px;/*permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (10px-0-10px-4px)
+  = 4 côtés d'un éléments*/
+  
+  overflow: hidden;/* définit comment gérer le dépassement du contenu d'un élément dans son bloc et le
+    contenu est rogné si besoin pour s'inscrire dans la boîte de remplissage (padding) et aucune barre de défilement n'est affichée.*/
+  
+  border-radius: 5px;/*permet de définir des coins arrondis pour la bordure d'un élémentde 5px.*/
+  
+  white-space: nowrap;/*décrire la façon dont les blancs sont gérés au sein de l'élément. 
+  nowrap = les passages à la ligne automatiques sont supprimés.*/
+  
+  position: relative; /*un élément positionné de façon relative a comme propriétés top ou bottom, et, indiquent 
+  le décalage vertical à appliquer. Left ou right indiquent le décalage horizontal.*/
+  
+  z-index:0;/*z-index définit le « z-order » d'un élément positionné et de ses éléments enfants ou de ses éléments flexibles de 0.*/
+}
+
+.skill-container .skill::before { /*crée un pseudo-élément qui sera le premier enfant de l'élément ciblé*/
+
+  content: "";/*permet de générer le contenu d'un élément, en loccurence, "before".*/
+
+  position: absolute;/*Élément positionné de façon absolue, si l'élément possède des marges, elles sont ajoutées aux décalages.*/
+
+  background-color: #312E81;/*permet de définir la couleur du background*/
+
+  border-radius: inherit;/*permet de définir des coins arrondis pour la bordure d'un élément en valeur globale.*/
+
+  z-index: -1;/*z-index définit le « z-order » d'un élément positionné et de ses éléments enfants ou de ses éléments flexibles de -1.*/
+
+  top: 0;/*définit une partie de la position des éléments positionnés en haut de 0*/
+
+  bottom: 0;/*contribue à la définition de l'emplacement vertical des éléments positionnés en bas de 0.*/
+
+  left: 0;/*permet de définir une partie de la position des éléments positionnés à gauche de 0*/
+
+  width:var(--l,0%);/*permet de définir la largeur du bloc avec variable permettant d'utilisé n'importe qu'elle valeur*/
+
+  animation: animateLeft 1s ease-out;/*permet de d'appliquer une animation entre des styles de 1s */
+
+}
+
+/*permet de définir les étapes qui composent la séquence de mon animation de barre de compétences CSS */
+@keyframes animateLeft {
+  from {
+    transform: translateX(-100%);/*modifie l'espace de coordonnées utilisé pour la mise en forme visuelle*/
+  }
+}
+
+
+/*----------------------------------------------*/
+
+/* CSS DE LA PARTIE FOOTER */
+
+/*----------------------------------------------*/
+
+footer{
+    margin-top: 40px; /* L'espace entre la partie principale et le footer  */
+    border-top: 5px solid #6f6f6f; /* création de la bordure, taille,
+    paramètre et sa couleur */
+    background-color: black; /* couleur d'arrière plan du footer */
+    color: white; /* Couleur du texte en blanc */
+    padding: 30px 100px; /* padding de 30px en haut et en bas
+                            padding de 100 px à droite et à gauche */
+}
+
+footer h1{
+    font-family: 'Zen Kaku Gothic New', sans-serif; /* Police d'écriture pour
+                                                    titre */
+    border-bottom: 1px solid white; /* la bordure est en bas, fait 1pixel
+                                        et est de couleur blanche */
+    width: 15%; /* largeur de 15% */
+    padding-bottom: 5px; /* marge entre le texte et le soulignement */
+
+}
+
+footer .services{
+    margin-top: -10px; /* se rapprocher du titre de 10px */
+    display: flex; /* aligner les éléments en ligne */
+    flex-wrap: wrap; /* lorsque le flex wrap ne permet pas d'aligner les 
+                        éléments, nous allons les aligner */
+
+}
+
+/* Eloigner les éléments mais le flex wrap ne nous le
+ permet pas, donc je créer le footer .services .service p */
+
+footer .services .service{
+    margin-right: 70px; /*définit l'espace horizontal à droite qui formera la marge à droite de 30px*/
+    
+}
+
+/* Réduire la largeur pour que les paragraphes soient alignés */
+
+footer .services .service p{
+    max-width: 300px;/*définir la largeur maximale d'un élément donné de 300px*/
+}

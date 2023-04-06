@@ -1,0 +1,39 @@
+
+
+A faire : /
+
+Fait :
+
+- Tout expliquer, chaque ligne (html, css) : CSS FAIT, HTML FAIT
+- Sponsors cliquables : FAIT
+- IMPORTANT : Image cliquable ou plusieurs trucs sont cliquables : FAIT
+- Corriger les erreurs html dans toutes les pages : 7/7 : FAIT
+- Corriger les erreurs du CSS : FAIT
+- FIX LES COMMENTAIRES EN : <!--  --> : FAIT
+- AJOUTER LES CERTIFICATION TLS/SSL ET HTML5 CSS 3 dans le footer : FAIT
+- REDIRECTION LORSQUE L4ON CLIQUE SUR LES CERTIFICATS, REDIRIGER  VERS UN PAGE AVEC TOUTE
+LES CERTIFICATIONS : FAIT
+- Faire les 3 vidéos et les placés sur les pages : 3/3 = FAIT
+- Finir de remplir les pages du site : 7/7 = FAIT 
+- Uniformiser toutes les pages (même barre de nav, mais pas le meme header) : FAIT
+- Galerie d'images sur ma ville... PARTIE 4 : FAIT
+- Revenir en haut de chaque site quand on clique sur le titre en haut à gauche : FAIT
+- Finir de mettre les logos sur les côtés du titre : FAIT
+- Changer les menus pour les sous pages : FAIT
+- Galerie d'image pour les books et movies : FAIT
+- Fix le bouton parcourir : FAIT (JE DEVAIS METTRE LE Z-INDEX DANS LA BARRE DE MON MENU CSS
+QUI A PERMIS DE REGLER LORDRE DANS LEQUEL LES OBJETS DEVAIT SE POSITIONNER)
+- Changer les ico des URL : FAIT
+- Couper en deux sur sony vegas les vidéos culture et sport ! : FAIT
+- Modifier les icones pour les mettres bien : Fait
+- Boutton parcourir idée pour parcourir les compétences : Fait
+- Faire la redirection des boutons sur les pages et des div : FAIT
+- Créer les pages de chaques sous-menus : Fait
+- Changer le gif par ma tête : FAIT 
+- Body background à changé : FAIT
+- Fond d'écran plus foncé : FAIT
+- Menu Interests déroulant : Sporting and culture; METTRE IMAGE : FAIT
+- Menu home déroulant : Perso détails, education background, expériences
+ et ajouter les compétences FAIT
+- Mon menu doit être fix : FAIT
+- Menu déroulant pour les chapitres de chaque pages : FAIT
